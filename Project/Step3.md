@@ -10,7 +10,7 @@ With Docker Desktop, Docker Compose is now integrated as a Docker CLI plugin, an
 
 #### 2. Begin to write the Docker Compose definitions with YAML syntax. The YAML file is used for defining services, networks, and volumes:
 
-``
+```
 version: "3.9"
 services:
   tooling_frontend:
@@ -19,7 +19,7 @@ services:
       - "5000:80"
     volumes:
       - tooling_frontend:/var/www/html
-``
+```
 
 - version: Is used to specify the version of Docker Compose API that the Docker Compose engine will connect to. This field is optional from docker compose version v1.27.0.
 - service: A service definition contains a configuration that is applied to each container started for that service. In the snippet above, the only service listed there is tooling_frontend. So, every other field under the tooling_frontend service will execute some commands that relate only to that service. Therefore, all the below-listed fields relate to the tooling_frontend service.
