@@ -30,7 +30,7 @@ services:
 
   Let us fill up the entire file and test our application:
 
-``
+```
 version: "3.9"
 services:
   tooling_frontend:
@@ -54,7 +54,7 @@ services:
 volumes:
   tooling_frontend:
   db:
-``
+```
 
 Run the command to start the containers
 
