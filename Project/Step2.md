@@ -334,23 +334,16 @@ pipeline {
 ```
 # Add Docker's official GPG key:
 sudo apt-get update
-
 sudo apt-get install ca-certificates curl
-
 sudo install -m 0755 -d /etc/apt/keyrings
-
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-
 sudo chmod a+r /etc/apt/keyrings/docker.asc
-
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
 sudo apt-get update
-
 sudo systemctl status docker
 sudo systemctl enable docker
 
@@ -404,4 +397,9 @@ Select create pipeline
 
 #### 3. Create a multi-branch pipeline
 
-#### 4. 4. Simulate a CI pipeline from a feature and master branch using previously created Jenkinsfile
+#### 4. Simulate a CI pipeline from a feature and master branch using previously created Jenkinsfile.
+
+![image](https://github.com/user-attachments/assets/366c7c9e-9886-4962-8123-92087e16f0af)
+
+
+#### 5. Ensure that the tagged images from your Jenkinsfile have a prefix that suggests which branch the image was pushed from. For example, feature-0.0.1.
